@@ -1,0 +1,2 @@
+Python is great
+Learning Python is fun
