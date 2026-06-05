@@ -16,23 +16,7 @@ class ExpenseTracker:
     ]
 
     def __init__(self, filename="expenses.csv"):
-        self.filename = filename
-1
-        try:
-            self.df = pd.read_csv(filename)
-
-            if not self.df.empty:
-                self.df["Date"] = pd.to_datetime(self.df["Date"])
-
-        except FileNotFoundError:
-            self.df = pd.DataFrame(
-                columns=["Date", "Amount", "Category", "Description"]
-            )
-            self.save_data()
-
-  
-    def save_data(self):
-        self.df.to_csv(self.filename, index=False)
+        same, index=False)
 
     def add_expense(self, date, amount, category, description):
 
